@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="video-background">
+      <div class="video-foreground">
+        <video id="bgvid" loop muted poster="stars.jpg" width="100%">
+          <source src="stars.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+
+    <div class="container" id="container">
+      <div class="header">
+        <h1>Let's watch the stars together</h1>
+        <div class="playpause-track" id="playpause-track" onclick="playVideo()">
+          <i class="fa fa-play-circle fa-3x"></i>
+          <img src="" alt="" />
+        </div>
+      </div>
+
+      <div class="center">
+        <div>
+          <button id="btn-change-background" onclick="playPauseTrack()">
+            <!-- <p style="color: white;">Party Mode</p> -->
+            <i class="fa fa-music" style="color: white; padding: 2px"></i>
+          </button>
+          <audio src="stars.mp3" id="audio"></audio>
+        </div>
+
+        <div class="progress-bar">
+          <input type="range" id="progressBar" min="0" max="" value="0" />
+        </div>
+        <div class="track-time">
+          <div id="currentTime"></div>
+          <div id="durationTime"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="script.js"></script>
+</html>
